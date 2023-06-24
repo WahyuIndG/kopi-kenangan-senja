@@ -1,0 +1,143 @@
+:root {
+  --primary: #b6895b;
+  --bg: #010101;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: 0;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: #fff;
+}
+
+/* Navbar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgb(1, 1, 1, 0.8);
+  border-bottom: 1px solid #543e29;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.navbar_logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  font-style: italic;
+}
+
+.navbar_logo span {
+  color: var(--primary);
+}
+
+.navbar_nav a {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+}
+
+.navbar_nav a:hover {
+  color: var(--primary);
+  transition: 0.2s linear;
+}
+
+.navbar_nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.35rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar_nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar_extra a {
+  color: #fff;
+  margin: 0 0.5rem;
+  transition: 0.15s linear;
+}
+
+.navbar_extra a:hover {
+  color: var(--primary);
+}
+
+#hamburger_menu {
+  display: none;
+}
+
+/* Responsive */
+
+/* Laptop */
+@media (max-width: 1440px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 65.5%;
+  }
+
+  #hamburger_menu {
+    display: inline-block;
+  }
+
+  .navbar_nav {
+    background-color: #fff;
+    width: 30rem;
+    height: 100vh;
+    position: absolute;
+    top: 100%; /*besar jarak top/bottom berdasarkan ukuran tinggi parent. exp, top: 100%  maka  jarak ke atas sebesar 100%*parent height */
+    right: -100%; /*besar jarak right/left berdasarkan ukuran lebar parent. */
+    transition: 0.2s linear;
+  }
+
+  .navbar_nav.active {
+    right: 0%;
+  }
+
+  .navbar_nav a {
+    color: var(--bg);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+    width: fit-content;
+  }
+
+  .navbar_nav a::after {
+    transform-origin: 0 0;
+  }
+
+  /* .navbar_nav a:hover::after {
+    transform: scaleX(0.2);
+  } */
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  html {
+    font-size: 55%;
+  }
+}
