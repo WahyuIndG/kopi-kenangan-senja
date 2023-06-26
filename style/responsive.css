@@ -75,6 +75,10 @@
   .contact .row .form {
     padding-top: 0;
   }
+
+  .modal_box .modal_content {
+    flex-wrap: wrap;
+  }
 }
 
 /* Mobile */
