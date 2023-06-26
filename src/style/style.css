@@ -12,6 +12,10 @@
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--bg);
@@ -147,17 +151,23 @@ body {
 
 /* About */
 
-.about {
+.about,
+.menu,
+.contact {
   padding: 10rem 7% 1.4rem;
 }
 
-.about h2 {
+.about h2,
+.menu h2,
+.contact h2 {
   font-size: 2.6rem;
   text-align: center;
   margin-bottom: 3rem;
 }
 
-.about h2 span {
+.about h2 span,
+.menu h2 span,
+.contact span {
   color: var(--primary);
 }
 
@@ -189,4 +199,125 @@ body {
   line-height: 1.6;
   font-weight: 100;
   margin-bottom: 0.8rem;
+}
+
+/* Section Menu */
+.menu h2,
+.contact h2 {
+  margin-bottom: 1rem;
+}
+.menu p,
+.contact p {
+  max-width: 35rem;
+  text-align: center;
+  font-weight: 100;
+  font-size: 1.3rem;
+  margin: auto;
+}
+
+.menu .row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+}
+
+.menu .row .menu_card {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.menu .row .menu_card .menu_card_img {
+  width: 80%;
+  border-radius: 50%;
+}
+
+.menu .row .menu_card_title {
+  font-size: 1.5rem;
+  margin: 1rem 0 0.5rem;
+}
+
+/* Section Contact */
+
+.contact .row {
+  display: flex;
+  background-color: #282828;
+  margin-top: 4rem;
+}
+
+.contact .row .map {
+  flex: 1 1 45rem;
+}
+
+.contact .row .form {
+  flex: 1 1 45rem;
+
+  padding: 4rem 2rem;
+}
+
+.contact .row .form .input_group {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  padding-left: 2rem;
+  background-color: var(--bg);
+  border: 1px solid #eee;
+}
+
+.contact .row .form .input_group input {
+  width: 100%;
+  background-color: transparent;
+  font-size: 1.7rem;
+  padding: 2rem;
+  color: white;
+}
+
+.contact .row .form .btn {
+  background-color: var(--primary);
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  margin: 3rem auto 0;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+}
+
+/* Footer */
+
+footer {
+  text-align: center;
+  background: var(--primary);
+  color: #fff;
+  padding: 2rem 0;
+  margin-top: 3rem;
+}
+
+footer .socials {
+  margin-bottom: 1rem;
+}
+
+footer .socials a {
+  color: inherit;
+  margin: 1rem;
+}
+
+footer .socials a:hover,
+footer .links a:hover {
+  color: var(--bg);
+  transition: 0.2s linear;
+}
+
+footer .links {
+  margin-bottom: 1rem;
+}
+
+footer .links a {
+  color: #fff;
+  padding: 0.7rem 1rem;
+  font-size: 1.1rem;
+}
+
+footer .credit a {
+  color: var(--bg);
+  font-weight: 700;
 }
